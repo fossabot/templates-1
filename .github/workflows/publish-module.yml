@@ -7,7 +7,7 @@ jobs:
   publish-module:
     runs-on: windows-latest
     steps:
-    - name: Checkout
+    - name: Checkout1514
       uses: actions/checkout@master
 
     - name: Setup dotnet
