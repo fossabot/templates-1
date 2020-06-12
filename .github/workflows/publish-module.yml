@@ -2,14 +2,9 @@
 
 name: Publish Module
 on:
-  push:
-    branches: [ master ]
-    tags: 
-      - "*"
-  pull_request:
-    branches: [ master ]
-    tags: 
-      - "*"
+  create:
+    types: 
+    - tag
 jobs:
   publish-module:
     runs-on: windows-latest
