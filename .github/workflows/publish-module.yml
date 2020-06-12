@@ -1,0 +1,44 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Publish Module
+on:
+  push:
+    branches: [ master ]
+    tags: 
+      - "*"
+  pull_request:
+    branches: [ master ]
+    tags: 
+      - "*"
+jobs:
+  publish-module:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@master
+      with:
+        dotnet-version: 3.1.301
+
+    - name: Test
+      run: dotnet test --no-restore
+      working-directory: .\dotnet\nuget\content
+
+    - name: Setup Nuget.exe
+      uses: warrenbuckley/Setup-Nuget@master
+    - name: Nuget Path
+      run: nuget push *.nupkg
+
+    - name: Generator Nuget
+      run: .\generator.nuget.ps1
+      working-directory: .\dotnet
+      shell: powershell
+
+    - name: Publish Nuget
+      run: |
+        version=`git describe --tags`
+        dotnet nuget push .\dotnet\Maple.Branch.Module.$version.nupkg -k ${APIKEY} -s https://api.nuget.org/v3/index.json
+      env: 
+        APIKEY: ${{secrets.PUBLISH_KEY}}
