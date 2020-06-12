@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="Localizations\ProjectsResources\*.json" />
+        <EmbeddedResource Include="Localizations\ProjectsResources\*.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Localization" Version="2.9.0" />
+        <PackageReference Include="Volo.Abp.Authorization" Version="2.9.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Company.Projects.Shared\Company.Projects.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

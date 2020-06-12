@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Maple512",
+    "classifications": ["Solution"],
+    "name": "Maple branch module",
+    "identity": "Maple.Branch.Module",
+    "shortName": "mt",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "Company.Projects",
+    "preferNameDirectory": true,
+    "symbols": {
+        "companyName": {
+            "type": "parameter",
+            "isRequired": true,
+            "defaultValue": "Company",
+            "replaces": "Company",
+            "fileRename": "Company",
+            "description": "Your company name"
+        },
+        "projectName": {
+            "type": "parameter",
+            "isRequired": true,
+            "defaultValue": "Projects",
+            "replaces": "Projects",
+            "fileRename": "Projects",
+            "description": "Your project name"
+        }
+    }
+}

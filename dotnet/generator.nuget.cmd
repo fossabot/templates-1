@@ -1,0 +1,1 @@
+PowerShell -File generator.nuget.ps1

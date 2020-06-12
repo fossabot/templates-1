@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Maple.Branch.Module</id>
+    <version>1.0.4</version>
+    <tags>
+      template
+    </tags>
+    <description>
+      Based on abp
+    </description>
+    <releaseNotes>
+      🐛fix bug: remove default language test code
+    </releaseNotes>
+    <authors>
+      Maple512
+    </authors>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <license type="expression">
+      MIT
+    </license>
+    <repository type="git" url="https://github.com/Maple512/templates" branch="master" />
+  </metadata>
+</package>
