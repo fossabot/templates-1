@@ -26,10 +26,10 @@ jobs:
       run: dotnet test --no-restore
       working-directory: .\dotnet\nuget\content
 
-    - name: Setup Nuget.exe
-      uses: warrenbuckley/Setup-Nuget@master
-    - name: Nuget Path
-      run: nuget push *.nupkg
+    - uses: nuget/setup-nuget@v1
+      with:
+        nuget-api-key: ${{ secrets.PUBLISH_KEY }}
+        nuget-version: '5.x'
 
     - name: Generator Nuget
       run: .\generator.nuget.ps1
