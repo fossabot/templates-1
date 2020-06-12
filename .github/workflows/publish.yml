@@ -36,7 +36,7 @@ jobs:
     
     - name: Publish Nuget
       run: |
-        version=`git describe --tags`
+        version = git describe --tags
         dotnet nuget push .\dotnet\Maple.Branch.Module.$version.nupkg -k ${APIKEY} -s https://api.nuget.org/v3/index.json
       env: 
         APIKEY: ${{secrets.PUBLISH_KEY}}
