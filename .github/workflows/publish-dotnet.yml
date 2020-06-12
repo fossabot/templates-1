@@ -1,6 +1,6 @@
 name: Publish Module
 on:
-  create 
+  create
 jobs:
   publish-module:
     runs-on: windows-latest
