@@ -37,7 +37,7 @@ jobs:
     - name: Publish Nuget
       working-directory: .\dotnet
       run: |
-        dotnet nuget push .\Maple.Branch.Module.${TAG_NAME}.nupkg -k ${APIKEY} -s https://api.nuget.org/v3/index.json
+        dotnet nuget push .\Maple.Branch.Module.${TAG_NAME}.nupkg -k ${APIKEY} -s https://www.nuget.org/api/v2/package
       env: 
         APIKEY: ${{secrets.PUBLISH_KEY}}
         TAG_NAME: Latest
