@@ -38,6 +38,6 @@ jobs:
       working-directory: .\dotnet
       run: |
         $version = git tag
-        nuget push .\Maple.Branch.Module.${$version}.nupkg ${APIKEY} -Source https://api.nuget.org/v3/index.json
+        nuget push ".\Maple.Branch.Module." + $version + ".nupkg" ${APIKEY} -Source https://api.nuget.org/v3/index.json
       env: 
         APIKEY: ${{secrets.PUBLISH_KEY}}
