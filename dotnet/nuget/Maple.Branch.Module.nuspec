@@ -10,7 +10,7 @@
       Based on abp
     </description>
     <releaseNotes>
-      🐛fix bug: remove default language test code
+      rename: update launchSettings.json
     </releaseNotes>
     <authors>
       Maple512
