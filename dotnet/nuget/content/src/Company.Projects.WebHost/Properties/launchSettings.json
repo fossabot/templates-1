@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Leaf.AccountModule.Web.Host": {
+    "Company.Projects.WebHost": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5000",

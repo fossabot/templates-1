@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Maple.Branch.Module</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <tags>
       template
     </tags>
@@ -10,7 +10,7 @@
       Based on abp
     </description>
     <releaseNotes>
-      🐛fix bug: remove default language test code
+      rename: update launchSettings.json
     </releaseNotes>
     <authors>
       Maple512
