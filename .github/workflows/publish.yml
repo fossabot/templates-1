@@ -28,8 +28,8 @@ jobs:
 
       - name: Pack
         working-directory: ./dotnet
-        shell: cmd
-        run: generator.nuget
+        shell: pwsh
+        run: generator.nuget.ps1
 
       - name: Publish
         run: dotnet nuget push ./dotnet/*.nupkg --api-key ${{ secrets.PUBLISH_KEY }} --source https://api.nuget.org/v3/index.json
