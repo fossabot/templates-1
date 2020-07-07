@@ -1,5 +1,8 @@
 name: publish to nuget
 on:
+  release:
+    - types:
+        created
   push:
     tags:
       - "v*"
@@ -26,10 +29,11 @@ jobs:
         working-directory: ./dotnet/nuget/content
         run: dotnet test Company.Projects.sln -c Release --no-restore
 
+      - uses: nuget/setup-nuget@v1
+        
       - name: Pack
-        working-directory: ./dotnet
         shell: pwsh
-        run: generator.nuget.ps1
-
+        run: nuget pack ./dotnet/nuget/Maple.Branch.Module.nuspec -NoDefaultExcludes
+        
       - name: Publish
-        run: dotnet nuget push ./dotnet/*.nupkg --api-key ${{ secrets.PUBLISH_KEY }} --source https://api.nuget.org/v3/index.json
+        run: nuget push ./*.nupkg ${{ secrets.PUBLISH_KEY }} -Source https://api.nuget.org/v3/index.json
