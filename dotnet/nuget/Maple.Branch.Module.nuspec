@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Maple.Branch.Module</id>
-    <version>1.0.5</version>
+    <version>3.0.2</version>
     <tags>
       template
     </tags>
@@ -10,7 +10,7 @@
       Based on abp
     </description>
     <releaseNotes>
-      rename: update launchSettings.json
+      Upgrade Volo.Abp to 3.0.2
     </releaseNotes>
     <authors>
       Maple512
