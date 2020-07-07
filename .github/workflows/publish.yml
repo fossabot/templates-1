@@ -1,8 +1,7 @@
 name: publish to nuget
 on:
   release:
-    types:
-      - created
+    types: [published, created, edited]
   push:
     tags:
       - "v*"
