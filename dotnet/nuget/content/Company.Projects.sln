@@ -10,6 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D000688A-5D34-4994-8E00-0E4D1998FF1F}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		common.props = common.props
+		configureawait.props = configureawait.props
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Projects.Shared", "src\Company.Projects.Shared\Company.Projects.Shared.csproj", "{1A55D0E2-995C-4507-B6B2-6C0A5178FE9A}"
