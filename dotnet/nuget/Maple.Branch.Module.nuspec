@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Maple.Branch.Module</id>
-    <version>3.0.3</version>
+    <version>3.0.4</version>
     <tags>
       template
     </tags>
@@ -10,7 +10,7 @@
       Based on abp
     </description>
     <releaseNotes>
-      Upgrade Volo.Abp to 3.0.3
+      Upgrade Volo.Abp to 3.0.4
     </releaseNotes>
     <authors>
       Maple512
@@ -19,7 +19,7 @@
       <packageType name="Template" />
     </packageTypes>
     <license type="expression">
-      MIT
+      Apache-2.0
     </license>
     <repository type="git" url="https://github.com/Maple512/templates" branch="master" />
   </metadata>
